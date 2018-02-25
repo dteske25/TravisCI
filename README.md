@@ -11,7 +11,17 @@ Accept the GitHub access permissions confirmation.
 Go to your profile page and enable this repository.
 Add a `.travis.yml` file to the root folder for your project. (These next steps can all be done on GitHub)
 We're following the information from [this](https://docs.travis-ci.com/user/languages/csharp/) guide to set up our project.
-
+```
+language: csharp
+solution: TravisCI.sln
+branches:
+  only:
+  - master
+install:
+  - nuget restore TravisCI.sln
+script:
+  - xbuild /p:Configuration=Release TravisCI.sln
+```
 
 ## Implement the Power method
 Once Travis CI is up and running, it should rebuild every time you push a change. Go ahead and implement the `Power` method found in `Program.cs`.
@@ -24,6 +34,12 @@ See if Travis CI started building master.
 
 ## Set up Travis CI to run Unit Tests
 
+
+```
+script:
+  - xbuild ...
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MathTests/bin/Release/MathTests.dll
+```
 
 ## Implement the other unit tests
 Follow the same format at the addition unit tests, and implement the other operations, including the power method you implemented before.
