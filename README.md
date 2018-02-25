@@ -22,6 +22,7 @@ Add a `.travis.yml` file to the root folder for your project. This is your Travi
 > We're following the information from [this](https://docs.travis-ci.com/user/languages/csharp/) guide to set up our project.
 
 Put the following in your Travis config:
+
 ```
 language: csharp
 solution: TravisCI.sln
@@ -37,9 +38,11 @@ script:
 - Commit and push these changes to master
 - Open travis-ci.org and see if your build is running. 
 - A running build will look like the following in the left drawer:
+
 ![travis running](./img/travis-running.png)
 
 You can follow along with the build log by clicking the gray circle in the upper-right of the build log:
+
 ![follow button](./img/follow-button.png)
 
 You also might have noticed that the "build passing" badge at the top of the readme is also right here (though it might not say passing right now). To get your own link, just click that badge, and from the dropdown, select the link as markdown. It will look something similar to `[![Build Status](https://travis-ci.org/username/TravisCI.svg?branch=master)](https://travis-ci.org/username/TravisCI)`. It's really nice to have that in your readme file, so that you always know the build status of your master branch.
@@ -53,8 +56,9 @@ Once Travis CI is up and running, it should rebuild every time you push a change
 - Verify that Travis CI started building your pull request.
 
 Travis CI is pretty well integrated into GitHub. I've got examples here showing the build statuses on the pull requests:
-- ![pr overview](./img/pr-overview.png)
-- ![pr detailed](./img/pr-detailed.png)
+
+![pr overview](./img/pr-overview.png)
+![pr detailed](./img/pr-detailed.png)
 
 
 Once the build completes, merge your pull request with master. Verify Travis CI started building master again.
@@ -68,11 +72,13 @@ script:
   - msbuild /p:Configuration=Release TravisCI.sln
   - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
 ```
+
 This is the NUnit test runner, and will allow Travis CI to run the tests on the server from the command line.
 Commit and push this change to master.
 Open Travis and make sure the build completes.
 
 If you've done this correctly, the following should appear at the bottom of your build log:
+
 ![nunit-tests](./img/nunit-tests.png)
 
 ## Implement the other unit tests
@@ -81,19 +87,23 @@ Follow the same format as the addition unit tests, and implement tests for the r
 - Run the tests locally, and intentionally make one fail.
 - Commit and push the changes to a different branch.
 - Open a new pull request.
-Travis CI will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following:
+
+Travis CI will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following;
+
 ![failed build](./img/failed-build.png)
 
 And in GitHub it will look like:
-- ![pr overview failed](./img/pr-overview-failed.png)
-- ![pr detailed failed](./img/pr-detailed-failed.png)
+
+![pr overview failed](./img/pr-overview-failed.png)
+![pr detailed failed](./img/pr-detailed-failed.png)
 
 - Push a change on the same branch to fix the test.
 - See if the build completes successfully.
 
-In GitHub, that will look like the following
-- ![pr overview passed](./img/pr-overview-passed.png)
-- ![pr detailed passed](./img/pr-detailed-passed.png)
+In GitHub, that will look like the following:
+
+![pr overview passed](./img/pr-overview-passed.png)
+![pr detailed passed](./img/pr-detailed-passed.png)
 
 If everything passes, feel free to merge. You are now using CI.
 
