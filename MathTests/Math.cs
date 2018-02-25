@@ -1,12 +1,12 @@
 ﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 
 namespace TravisCILab
 {
-    [TestClass]
+    [TestFixture]
     public class Math
     {
-        [TestMethod]
+        [Test]
         public void Add_Valid()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
@@ -14,20 +14,20 @@ namespace TravisCILab
             Assert.AreEqual(12, Program.Add("5", "7"));
         }
 
-        [TestMethod]
+        [Test]
         public void Add_Invalid()
         {
-            Assert.ThrowsException<FormatException>(() => Program.Add("1", "a"));
-            Assert.ThrowsException<FormatException>(() => Program.Add("a", "1"));
-            Assert.ThrowsException<FormatException>(() => Program.Add("a", "a"));
+            Assert.Throws<FormatException>(() => Program.Add("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Add("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Add("a", "a"));
         }
 
-        [TestMethod]
+        [Test]
         public void Add_Null()
         {
-            Assert.ThrowsException<ArgumentNullException>(() => Program.Add("1", null));
-            Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, "1"));
-            Assert.ThrowsException<ArgumentNullException>(() => Program.Add(null, null));
+            Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
         // Implement 3 tests per operation, following a similar pattern as above

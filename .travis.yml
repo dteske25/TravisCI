@@ -1,0 +1,7 @@
+language: csharp
+solution: TravisCI.sln
+install:
+  - nuget restore TravisCI.sln
+script:
+  - xbuild /p:Configuration=Release TravisCI.sln
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MathTests/bin/Release/MathTests.dll

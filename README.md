@@ -4,6 +4,10 @@
 Try out the console app, see if you can break it and where the weaknesses in the code are.
 
 ## Set up Travis CI to build the Console App
+Go to [travis-ci.org](http://travis-ci.org), and sign-in with your GitHub credentials.
+Accept the GitHub access permissions confirmation.
+Go to your profile page and enable this repository.
+Add a `.travis.yml` file to the root folder for your project. (These next steps can all be done on GitHub)
 
 
 ## Implement the Power method
