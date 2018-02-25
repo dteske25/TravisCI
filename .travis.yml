@@ -1,5 +1,8 @@
 language: csharp
 solution: TravisCI.sln
+branches:
+  only:
+  - master
 install:
   - nuget restore TravisCI.sln
 script:

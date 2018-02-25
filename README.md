@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/dteske25/TravisCI.svg?branch=master)](https://travis-ci.org/dteske25/TravisCI)
+
 # Travis CI Lab
 
 ## Run the Console App
@@ -8,6 +10,7 @@ Go to [travis-ci.org](http://travis-ci.org), and sign-in with your GitHub creden
 Accept the GitHub access permissions confirmation.
 Go to your profile page and enable this repository.
 Add a `.travis.yml` file to the root folder for your project. (These next steps can all be done on GitHub)
+We're following the information from [this](https://docs.travis-ci.com/user/languages/csharp/) guide to set up our project.
 
 
 ## Implement the Power method
