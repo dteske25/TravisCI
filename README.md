@@ -38,7 +38,7 @@ See if Travis CI started building master.
 ```
 script:
   - xbuild ...
-  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MathTests/bin/Release/MathTests.dll
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
 ```
 
 ## Implement the other unit tests
