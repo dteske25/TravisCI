@@ -31,6 +31,11 @@ script:
 
 Commit and push these files to master
 Open travis-ci.org and see if your build is running. 
+A running build will look like the following in the left side:
+![travis running](./img/travis-running.png)
+
+You can follow along with the build by clicking the gray circle in the upper-right of the build log:
+![follow button](./img/follow-button.png)
 
 ## Implement the Power method
 Once Travis CI is up and running, it should rebuild every time you push a change. 
@@ -38,6 +43,8 @@ Implement the `Power` method found in `Program.cs`.
 Commit and push the change to a different branch.
 Open a pull request.
 Verify that Travis CI started building your pull request.
+![pr overview](./img/pr-overview.png)
+![pr detailed](./img/pr-detailed.png)
 Once the build completes, merge your pull request with master.
 Verify Travis CI started building master.
 
@@ -63,6 +70,14 @@ Run the tests locally, and intentionally make one fail.
 Commit and push the changes to a different branch.
 Open a new pull request.
 See if Travis CI will detect the failed test.
+A failed build will look like the following:
+![failed build](./img/failed-build.png)
+![pr overview failed](./img/pr-overview-failed.png)
+![pr detailed failed](./img/pr-detailed-failed.png)
+
 Push a change on the same branch to fix the test.
 See if the build completes successfully.
-Merge the pull request if it does, fix it otherwise.
+
+
+Merge the Pull Request
+For more information and customization, visit https://docs.travis-ci.com/
