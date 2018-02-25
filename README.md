@@ -31,6 +31,11 @@ script:
 
 Commit and push these files to master
 Open travis-ci.org and see if your build is running. 
+A running build will look like the following in the left side:
+![travis running](./img/travis-running.png)
+
+You can follow along with the build by clicking the gray circle in the upper-right of the build log:
+![follow button](./img/follow-button.png)
 
 ## Implement the Power method
 Once Travis CI is up and running, it should rebuild every time you push a change. 
