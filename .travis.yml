@@ -5,7 +5,6 @@ branches:
   - master
 install:
   - nuget restore TravisCI.sln
-  - nuget install NUnit.ConsoleRunner -Version 3.8.0 -OutputDirectory testrunner
 script:
   - xbuild /p:Configuration=Release TravisCI.sln
-  - mono ./testrunner/NUnit.ConsoleRunner.3.8.0/tools/nunit3-console.exe ./MathTests/bin/Release/MathTests.dll
+  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./MathTests/bin/Release/MathTests.dll
