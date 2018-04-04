@@ -8,7 +8,7 @@ By signing up for GitHub's education pack, you can enable [Travis CI](https://tr
 Fork and clone the repo to your computer to get started.
 
 ## Deliverables
-**This lab is graded**. You will submit a screenshot of your Travis CI builds to verify you did the assignment correctly.
+**This lab is worth 10 points**. You will submit a screenshot of your Travis CI builds to verify you did the assignment correctly.
 
 ## Run the Console App
 Just as a sanity check, make sure that everything is working before you begin. Try out the console app, see if you can break it and where the weaknesses in the code are. Try manually running the tests.
