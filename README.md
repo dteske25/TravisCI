@@ -3,9 +3,12 @@
 # Travis CI Lab
 We are going to be setting up continuous integration today on a sample project. 
 Continuous integration can be used to perfom checks on written code, making sure that unit tests always pass or that formatting is followed, and that when changes are made, they don't break other areas of the code.
-Unfortunately, to set up Travis CI on a private project, you have to pay for it, so you will have to make the repository public.
+By signing up for GitHub's education pack, you can enable [Travis CI](https://travis-ci.com) for private repositories. This is good practice and would be **excellent** to do on your own projects.
 
 Fork and clone the repo to your computer to get started.
+
+## Deliverables
+**This lab is graded**. You will submit a screenshot of your Travis CI builds to verify you did the assignment correctly.
 
 ## Run the Console App
 Just as a sanity check, make sure that everything is working before you begin. Try out the console app, see if you can break it and where the weaknesses in the code are. Try manually running the tests.
@@ -108,3 +111,16 @@ In GitHub, that will look like the following:
 If everything passes, feel free to merge. You are now using CI.
 
 This is a pretty simple setup for Travis CI. There's a lot of customization that can be done, so check out https://docs.travis-ci.com/ if you're curious about how it could be used. This is a free service, so if you have a public side project, I'd encourage you to set up Travis CI on it. Even if you don't really need to use it, it's great practice.
+
+## Deliverable
+Go to `https://travis-ci.org/<your github username>/TravisCI/builds`. Take a screenshot including the list of builds. There should be 4 tests:
+* The initial commit containing the .travis.yml file (should pass)
+* The commit adding tests to the .travis.yml file (should pass)
+* The commit adding a broken unit test (should fail)
+* The commit fixing that broken unit test (should pass)
+Your image should look like this (with one less commit - yours should only have 4):
+
+!(deliverable example)[./img/deliverable-example.png]
+
+## Your Project
+With GitHub's education pack, you can use Travis CI with your private repositories. Continuous integration is a huge benefit, so it is highly recommended that you add it to your own projects.
