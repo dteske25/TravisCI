@@ -120,7 +120,7 @@ Go to `https://travis-ci.org/<your github username>/TravisCI/builds`. Take a scr
 * The commit fixing that broken unit test (should pass)
 Your image should look like this (with one less commit - yours should only have 4):
 
-!(deliverable example)[./img/deliverable-example.png]
+![deliverable example](./img/deliverable-example.png)
 
 ## Your Project
 With GitHub's education pack, you can use Travis CI with your private repositories. Continuous integration is a huge benefit, so it is highly recommended that you add it to your own projects.
