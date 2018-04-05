@@ -80,11 +80,10 @@ namespace TravisCILab
         {
             return double.Parse(x) / double.Parse(y);
         }
-
-        // Implement this method following a similar pattern as above
+        
         public static double Power(string x, string y)
         {
-            throw new NotImplementedException();
+            return Math.Pow(double.Parse(x), double.Parse(y));
         }
     }
 
