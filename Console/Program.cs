@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Runtime.CompilerServices;
 
 namespace TravisCILab
 {
@@ -36,8 +35,7 @@ namespace TravisCILab
                             operation = Divide;
                             break;
                         case "5":
-                            oper
-                                ation = Power;
+                            operation = Power;
                             break;
                         case "6":
                             loop = false;
@@ -86,7 +84,7 @@ namespace TravisCILab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            return Math.Pow(Double.Parse(x), Double.Parse(y));
+            throw new NotImplementedException();
         }
     }
 
