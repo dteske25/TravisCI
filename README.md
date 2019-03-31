@@ -108,3 +108,6 @@ In GitHub, that will look like the following:
 If everything passes, feel free to merge. You are now using CI.
 
 This is a pretty simple setup for Travis CI. There's a lot of customization that can be done, so check out https://docs.travis-ci.com/ if you're curious about how it could be used. This is a free service, so if you have a public side project, I'd encourage you to set up Travis CI on it. Even if you don't really need to use it, it's great practice.
+
+
+https://travis-ci.com/kyliebecker/TravisCI
