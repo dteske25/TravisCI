@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.InteropServices;
 
 namespace TravisCI
 {
@@ -84,10 +85,12 @@ namespace TravisCI
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
+            var initial = double.Parse(x);
             var answer = double.Parse(x);
-            for (var i = 0; i < double.Parse(y); i++)
+
+            for (var i = 0; i < double.Parse(y)-1; i++)
             {
-               answer = answer* answer;
+               answer = initial * answer;
             }
 
             return answer;
