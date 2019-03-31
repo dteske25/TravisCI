@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dteske25/TravisCI.svg?branch=master)](https://travis-ci.org/dteske25/TravisCI)
+[![Build Status](https://travis-ci.com/nasiscoe/TravisCI.svg?branch=master)](https://travis-ci.com/nasiscoe/TravisCI)
 
 # Travis CI Lab
 We are going to be setting up continuous integration today on a sample project. 
@@ -11,7 +11,7 @@ Fork and clone the repo to your computer to get started.
 Just as a sanity check, make sure that everything is working before you begin. Try out the console app, see if you can break it and where the weaknesses in the code are. Try manually running the tests.
 
 ## Set up Travis CI to build the Console App
-- Go to [travis-ci.org](http://travis-ci.org), and sign-in with your GitHub credentials. 
+- Go to [travis-ci.org](http://travis-ci.org), and sign-in with your GitHub credentials.
 - Accept the GitHub access permissions confirmation.
 - Go to your profile page and enable this repository.
 - Click the gear icon, and make sure the settings are as follows:
@@ -36,7 +36,7 @@ script:
 ```
 
 - Commit and push these changes to master
-- Open travis-ci.org and see if your build is running. 
+- Open travis-ci.org and see if your build is running.
 - A running build will look like the following in the left drawer:
 
 ![travis running](./img/travis-running.png)
@@ -64,8 +64,8 @@ Travis CI is pretty well integrated into GitHub. I've got examples here showing 
 Once the build completes, merge your pull request with master. Verify Travis CI started building master again.
 
 ## Set up Travis CI to run Unit Tests
-To run the tests after every change, we'll have to modify the Travis config slightly. 
-Adjust the `script` section to be the following. 
+To run the tests after every change, we'll have to modify the Travis config slightly.
+Adjust the `script` section to be the following.
 
 ```
 script:
