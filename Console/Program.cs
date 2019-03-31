@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TravisCILab
+namespace TravisCI
 {
     public class Program
     {
@@ -84,7 +84,7 @@ namespace TravisCILab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            var answer = 0;
+            var answer = double.Parse(x);
             for (var i = 0; i < double.Parse(y); i++)
             {
                answer = answer* answer;

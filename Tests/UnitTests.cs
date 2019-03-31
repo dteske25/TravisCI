@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace TravisCILab
+namespace TravisCI
 {
     [TestFixture]
     public class Math
