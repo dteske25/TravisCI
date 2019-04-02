@@ -87,7 +87,4 @@ namespace TravisCILab
            return Math.Pow(double.Parse(x), double.Parse(y));
         }
     }
-
-
-
 }
