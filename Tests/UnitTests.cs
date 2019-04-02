@@ -35,7 +35,7 @@ namespace TravisCILab
         public void Subtract_Valid()
         {
             Assert.AreEqual(3, Program.Subtract("4,", "1"));
-            Assert.AreEqual(11, Program.Subtract("12", "1")); // Intentionally failing
+            Assert.AreEqual(12, Program.Subtract("13", "1")); // Intentionally failing
             Assert.AreEqual(17, Program.Subtract("18", "1"));
         }
 
