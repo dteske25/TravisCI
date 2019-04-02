@@ -21,6 +21,7 @@ namespace Tests
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
             Assert.Throws<FormatException>(() => Program.Add("a", "a"));
+
         }
 
         [Test]
