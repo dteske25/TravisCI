@@ -30,6 +30,10 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Test_Fail()
+        {
+            Assert.True(false);
+        }
     }
 }
