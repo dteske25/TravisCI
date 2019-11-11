@@ -31,9 +31,9 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Test_Fail()
+        public void Test_Pass()
         {
-            Assert.True(false);
+            Assert.True(true);
         }
     }
 }
