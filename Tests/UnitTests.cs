@@ -35,7 +35,7 @@ namespace TravisCILab
         {
             Assert.AreEqual(-1, Program.Subtract("1", "2"));
             Assert.AreEqual(1, Program.Subtract("3", "2"));
-            Assert.AreEqual(-1, Program.Subtract("5", "7"));
+            Assert.AreEqual(-2, Program.Subtract("5", "7"));
         }
 
         [Test]
