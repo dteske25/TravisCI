@@ -1,5 +1,4 @@
 ﻿using System;
-using Math;
 
 namespace TravisCILab
 {
@@ -85,7 +84,7 @@ namespace TravisCILab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            return Pow(double.Parse(x), double.Parse(y));
+            throw new NotImplementedException();
         }
     }
 
