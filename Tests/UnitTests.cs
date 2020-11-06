@@ -31,5 +31,30 @@ namespace TravisCILab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Pow_Valid()
+        {
+            Assert.AreEqual(3, Program.Power("1", "3"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+            Assert.AreEqual(4, Program.Power("2", "2"));
+        }
+
+        [Test]
+        public void Pow_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Power("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Power("a", "a"));
+        }
+
+        [Test]
+        public void Pow_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
+        }
+
+
     }
 }
