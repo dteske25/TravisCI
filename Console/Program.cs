@@ -1,93 +1,132 @@
-﻿using System;
+using System;
+using NUnit.Framework;
 
 namespace TravisCILab
 {
-    public class Program
+    [TestFixture]
+    public class Math
     {
-        static void Main(string[] args)
+        [Test]
+        public void Add_Valid()
         {
-            Console.WriteLine("The Quick Calculator");
-            var loop = true;
-            while (loop)
-            {
-                try
-                {
-                    Func<string, string, double> operation = null;
-                    Console.WriteLine("1) Add (x+y)");
-                    Console.WriteLine("2) Subtract (x-y)");
-                    Console.WriteLine("3) Multiply (x*y)");
-                    Console.WriteLine("4) Divide (x/y)");
-                    Console.WriteLine("5) Power (x^y)");
-                    Console.WriteLine("6) Quit");
-                    var operationSelection = GetInput("Select your operation: ");
-                    switch (operationSelection)
-                    {
-                        case "1":
-                            operation = Add;
-                            break;
-                        case "2":
-                            operation = Subtract;
-                            break;
-                        case "3":
-                            operation = Multiply;
-                            break;
-                        case "4":
-                            operation = Divide;
-                            break;
-                        case "5":
-                            operation = Power;
-                            break;
-                        case "6":
-                            loop = false;
-                            continue;
-                        default:
-                            throw new ArgumentException("You did not select a valid option!");
-                    }
-
-                    var x = GetInput("Enter x: ");
-                    var y = GetInput("Enter y: ");
-                    var result = operation(x, y);
-                    Console.WriteLine($"Result: {result}");
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.Message);
-                }
-
-            }
+            Assert.AreEqual(3, Program.Add("1", "2"));
+            Assert.AreEqual(5, Program.Add("3", "2"));
+            Assert.AreEqual(12, Program.Add("5", "7"));
         }
 
-        public static string GetInput(string prompt)
+        [Test]
+        public void Add_Invalid()
         {
-            Console.Write(prompt);
-            return Console.ReadLine().Trim();
+            Assert.Throws<FormatException>(() => Program.Add("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Add("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Add("a", "a"));
         }
 
-        public static double Add(string x, string y)
+        [Test]
+        public void Add_Null()
         {
-            return double.Parse(x) + double.Parse(y);
+            Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        public static double Subtract(string x, string y)
+        // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Subtract_Valid()
         {
-            return double.Parse(x) - double.Parse(y);
-        }
-        public static double Multiply(string x, string y)
-        {
-            return double.Parse(x) * double.Parse(y);
-        }
-        public static double Divide(string x, string y)
-        {
-            return double.Parse(x) / double.Parse(y);
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+            Assert.AreEqual(-2, Program.Subtract("5", "7"));
         }
 
-        // Implement this method following a similar pattern as above
-        public static double Power(string x, string y)
+        [Test]
+        public void Subtract_Invalid()
         {
-            return Math.Pow(double.Parse(x), double.Parse(y));
+            Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
+        }
+
+        [Test]
+        public void Subtract_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
+        }
+
+
+        [Test]
+        public void Multiply_Valid()
+        {
+            Assert.AreEqual(2, Program.Multiply("1", "2"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(35, Program.Multiply("5", "7"));
+        }
+
+        [Test]
+        public void Multiply_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
+        }
+
+        [Test]
+        public void Multiply_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
+        }
+
+
+        [Test]
+        public void Divide_Valid()
+        {
+            Assert.AreEqual(1, Program.Multiply("2", "1"));
+            Assert.AreEqual(2, Program.Multiply("4", "2"));
+            Assert.AreEqual(1, Program.Multiply("5", "5"));
+        }
+
+        [Test]
+        public void Divide_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
+        }
+
+        [Test]
+        public void Divide_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
+        }
+
+
+        public void Power_Valid()
+        {
+            Assert.AreEqual(2, Program.Multiply("2", "1"));
+            Assert.AreEqual(16, Program.Multiply("4", "2"));
+            Assert.AreEqual(125, Program.Multiply("5", "3"));
+        }
+
+        [Test]
+        public void Power_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Multiply("a", "a"));
+        }
+
+        [Test]
+        public void Power_Null()
+        {
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, null));
         }
     }
-
-
-
 }
