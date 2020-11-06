@@ -9,9 +9,9 @@ namespace TravisCILab
         [Test]
         public void Add_Valid()
         {
-            Assert.AreEqual(11, Program.Add("1", "2"));
-            Assert.AreEqual(51, Program.Add("3", "2"));
-            Assert.AreEqual(121, Program.Add("5", "7"));
+            Assert.AreEqual(3, Program.Add("1", "2"));
+            Assert.AreEqual(5, Program.Add("3", "2"));
+            Assert.AreEqual(12, Program.Add("5", "7"));
         }
 
         [Test]
@@ -34,9 +34,9 @@ namespace TravisCILab
         [Test]
         public void Subtract_Valid()
         {
-            Assert.AreEqual(11, Program.Subtract("3", "2"));
-            Assert.AreEqual(21, Program.Subtract("5", "3"));
-            Assert.AreEqual(41, Program.Subtract("11", "7"));
+            Assert.AreEqual(1, Program.Subtract("3", "2"));
+            Assert.AreEqual(2, Program.Subtract("5", "3"));
+            Assert.AreEqual(4, Program.Subtract("11", "7"));
         }
 
         [Test]
@@ -58,9 +58,9 @@ namespace TravisCILab
         [Test]
         public void Multiply_Valid()
         {
-            Assert.AreEqual(61, Program.Multiply("3", "2"));
-            Assert.AreEqual(115, Program.Multiply("5", "3"));
-            Assert.AreEqual(717, Program.Multiply("11", "7"));
+            Assert.AreEqual(6, Program.Multiply("3", "2"));
+            Assert.AreEqual(15, Program.Multiply("5", "3"));
+            Assert.AreEqual(77, Program.Multiply("11", "7"));
         }
 
         [Test]
@@ -82,9 +82,9 @@ namespace TravisCILab
         [Test]
         public void Divide_Valid()
         {
-            Assert.AreEqual(31, Program.Divide("6", "2"));
-            Assert.AreEqual(11, Program.Divide("5", "5"));
-            Assert.AreEqual(12, Program.Divide("14", "7"));
+            Assert.AreEqual(3, Program.Divide("6", "2"));
+            Assert.AreEqual(1, Program.Divide("5", "5"));
+            Assert.AreEqual(2, Program.Divide("14", "7"));
         }
 
         [Test]
@@ -106,9 +106,9 @@ namespace TravisCILab
         [Test]
         public void Power_Valid()
         {
-            Assert.AreEqual(11, Program.Power("6", "2"));
-            Assert.AreEqual(312, Program.Power("2", "5"));
-            Assert.AreEqual(1196, Program.Power("14", "2"));
+            Assert.AreEqual(36, Program.Power("6", "2"));
+            Assert.AreEqual(32, Program.Power("2", "5"));
+            Assert.AreEqual(196, Program.Power("14", "2"));
         }
 
         [Test]
