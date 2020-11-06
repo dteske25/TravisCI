@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/VegaDeftwing/TravisCI.svg?branch=master)](https://travis-ci.org/VegaDeftwing/TravisCI)
 
+
 # Travis CI Lab
 We are going to be setting up continuous integration today on a sample project. 
 Continuous integration can be used to perfom checks on written code, making sure that unit tests always pass or that formatting is followed, and that when changes are made, they don't break other areas of the code.
