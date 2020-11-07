@@ -42,8 +42,7 @@ namespace TravisCILab
         [Test]
         public void Subtract_Valid()
         {
-            // Answer here is purposely wrong--it should be -1, but 10 was used instead.
-            Assert.AreEqual(10, Program.Subtract("1", "2"));
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
             Assert.AreEqual(2, Program.Subtract("5", "3"));
             Assert.AreEqual(18, Program.Subtract("60", "42"));
         }
