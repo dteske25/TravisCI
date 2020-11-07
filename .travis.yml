@@ -1,9 +1,9 @@
-language csharp
-solution TravisCI.sln
-branches
-  only
+language: csharp
+solution: TravisCI.sln
+branches:
+  only:
   - master
-install
+install:
   - nuget restore TravisCI.sln
-script
-  - msbuild pConfiguration=Release TravisCI.sln
+script:
+  - msbuild /p:Configuration=Release TravisCI.sln
