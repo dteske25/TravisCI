@@ -31,5 +31,30 @@ namespace TravisCILab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void Power_Valid()
+        {
+            Assert.AreEqual(4, Program.Power("2", "2"));
+            Assert.AreEqual(1024, Program.Power("32", "2"));
+            Assert.AreEqual(78125, Program.Subtract("5", "7"));
+        }
+
+        [Test]
+        public void Subtract_Valid()
+        {
+            // Answer here is purposely wrong--it should be -1, but 10 was used instead.
+            Assert.AreEqual(10, Program.Subtract("1", "2"));
+            Assert.AreEqual(2, Program.Subtract("5", "3"));
+            Assert.AreEqual(18, Program.Subtract("60", "42"));
+        }
+
+        [Test]
+        public void Multiply_Valid()
+        {
+            Assert.AreEqual(35, Program.Multiply("7", "5"));
+            Assert.AreEqual(5.5, Program.Multiply("2.75", "2"));
+            Assert.AreEqual(2.5, Program.Multiply("5", "0.5"));
+        }
     }
+}
 }
