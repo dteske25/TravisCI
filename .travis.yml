@@ -7,3 +7,4 @@ install:
   - nuget restore TravisCI.sln
 script:
   - msbuild /p:Configuration=Release TravisCI.sln
+  
