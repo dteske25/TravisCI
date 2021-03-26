@@ -84,13 +84,10 @@ namespace TravisCILab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            double result = double.Parse(x);
+            double newX = double.Parse(x);
             double newY = double.Parse(y);
-            for(int i = 1; i < newY; i++)
-            {
-                result = result * newY;
-            }
-            return result;      
+            double result = Math.Pow(newX, newY);
+            return result;
         }
     }
 
