@@ -81,6 +81,7 @@ namespace TravisCILab
             return double.Parse(x) / double.Parse(y);
         }
 
+        
         public static double Power(string x, string y)
         {
             double newX = double.Parse(x);
