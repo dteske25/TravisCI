@@ -54,7 +54,6 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
 
-<<<<<<< Updated upstream
         [Test]
         public void Multiply_Valid()
         {
@@ -126,8 +125,6 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, null));
         }
-=======
->>>>>>> Stashed changes
         // Implement 3 tests per operation, following a similar pattern as above
     }
 }
