@@ -58,7 +58,7 @@ namespace TravisCILab
         [Test]
         public void Multiply_Valid()
         {
-            Assert.AreEqual(7.1, Program.Multiply("1", "7"));
+            Assert.AreEqual(7, Program.Multiply("1", "7"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
             Assert.AreEqual(35, Program.Multiply("5", "7"));
         }

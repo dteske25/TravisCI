@@ -3,6 +3,7 @@ solution: TravisCI.sln
 branches:
   only:
   - master
+  - new_tests
 install:
   - nuget restore TravisCI.sln
 script:
