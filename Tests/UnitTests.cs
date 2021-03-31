@@ -5,9 +5,9 @@ namespace TravisCILab
 {
     [TestFixture]
     public class Math
-    {
+    { 
         [Test]
-        public void Add_Valid()
+        public void Add_ValidKramer()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -15,7 +15,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Add_InvalidKramer()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -23,16 +23,15 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Null()
+        public void Add_NullKramer()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // Implement 3 tests per operation, following a similar pattern as above
         [Test]
-        public void Subtract_Valid()
+        public void Subtract_ValidKramer()
         {
             Assert.AreEqual(3, Program.Subtract("5", "2"));
             Assert.AreEqual(11, Program.Subtract("7", "-4"));
@@ -40,7 +39,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Invalid()
+        public void Subtract_InvalidKramer()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
             Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
@@ -48,7 +47,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Null()
+        public void Subtract_NullKramer()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -56,7 +55,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Valid()
+        public void Multiply_ValidKramer()
         {
             Assert.AreEqual(7, Program.Multiply("1", "7"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
@@ -64,7 +63,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Invalid()
+        public void Multiply_InvalidKramer()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -72,7 +71,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Null()
+        public void Multiply_NullKramer()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -80,7 +79,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Valid()
+        public void Divide_ValidKramer()
         {
             Assert.AreEqual(3, Program.Divide("9", "3"));
             Assert.AreEqual(1.5, Program.Divide("3", "2"));
@@ -88,7 +87,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Invalid()
+        public void Divide_InvalidKramer()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -96,7 +95,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Null()
+        public void Divide_NullKramer()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -104,7 +103,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Valid()
+        public void Power_ValidKramer()
         {
             Assert.AreEqual(8, Program.Power("2", "3"));
             Assert.AreEqual(9, Program.Power("3", "2"));
@@ -112,7 +111,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Invalid()
+        public void Power_InvalidKramer()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -120,7 +119,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Null()
+        public void Power_NullKramer()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
