@@ -1,4 +1,4 @@
-language: csharp
+language: generic
 solution: TravisCI.sln
 branches:
   only:
