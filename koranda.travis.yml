@@ -1,6 +1,6 @@
 language: csharp
 mono: none
-dotnet: 3.1.405
+dotnet: 5.0.100
 solution: TravisCI.sln
 branches:
   only:
