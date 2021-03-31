@@ -7,7 +7,7 @@ namespace TravisCILab
     public class Math
     {
         [Test]
-        public void Add_Valid()
+        public void Add_ValidMcElmury()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -15,7 +15,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Add_InvalidMcElmury()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -23,7 +23,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Null()
+        public void Add_NullMcElmury()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
