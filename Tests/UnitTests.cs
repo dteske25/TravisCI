@@ -107,7 +107,7 @@ namespace TravisCILab
         [Test]
         public void Power_Valid_Koranda()
         {
-            Assert.AreEqual(4, Program.Power("1", "2"));
+            Assert.AreEqual(4, Program.Power("2", "2"));
             Assert.AreEqual(9, Program.Power("3", "2"));
             Assert.AreEqual(1, Program.Power("1", "7"));
         }
