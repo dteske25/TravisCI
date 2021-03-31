@@ -8,8 +8,3 @@ install:
 script:
   - msbuild /p:Configuration=Release TravisCI.sln
 
-
-# language: ruby
-# rvm:
- # - 2.2
- # - jruby
