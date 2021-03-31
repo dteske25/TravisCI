@@ -34,8 +34,8 @@ namespace TravisCILab
         [Test]
         public void Subtract_Valid_Garbison()
         {
-            //This one should fail
-            Assert.AreEqual(5, Program.Subtract("5", "1"));
+            
+            Assert.AreEqual(4, Program.Subtract("5", "1"));
             Assert.AreEqual(7, Program.Subtract("10", "3"));
             Assert.AreEqual(1, Program.Subtract("20", "19"));
         }
