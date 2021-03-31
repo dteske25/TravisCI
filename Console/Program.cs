@@ -19,7 +19,7 @@ namespace TravisCILab
                     Console.WriteLine("4) Divide (x/y)");
                     Console.WriteLine("5) Power (x^y)");
                     Console.WriteLine("6) Quit");
-                    var operationSelection = GetInput("Select your operation: ");
+                    var operationSelection = GetInputLi("Select your operation: ");
                     switch (operationSelection)
                     {
                         case "1":
@@ -44,8 +44,8 @@ namespace TravisCILab
                             throw new ArgumentException("You did not select a valid option!");
                     }
 
-                    var x = GetInput("Enter x: ");
-                    var y = GetInput("Enter y: ");
+                    var x = GetInputLi("Enter x: ");
+                    var y = GetInputLi("Enter y: ");
                     var result = operation(x, y);
                     Console.WriteLine($"Result: {result}");
                 }
@@ -57,34 +57,34 @@ namespace TravisCILab
             }
         }
 
-        public static string GetInput(string prompt)
+        public static string GetInputLi(string prompt)
         {
             Console.Write(prompt);
             return Console.ReadLine().Trim();
         }
 
-        public static double Add(string x, string y)
+        public static double AddLi(string x, string y)
         {
             return double.Parse(x) + double.Parse(y);
         }
 
-        public static double Subtract(string x, string y)
+        public static double SubtractLi(string x, string y)
         {
             return double.Parse(x) - double.Parse(y);
         }
-        public static double Multiply(string x, string y)
+        public static double MultiplyLi(string x, string y)
         {
             return double.Parse(x) * double.Parse(y);
         }
-        public static double Divide(string x, string y)
+        public static double DivideLi(string x, string y)
         {
             return double.Parse(x) / double.Parse(y);
         }
 
         // Implement this method following a similar pattern as above
-        public static double Power(string x, string y)
+        public static double PowerLi(string x, string y)
         {
-            throw new NotImplementedException();
+            return Math.Pow(double.Parse(x), double.Parse(y));
         }
     }
 
