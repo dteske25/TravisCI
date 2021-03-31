@@ -8,7 +8,7 @@ namespace TravisCILab
     {
         // Add tests
         [Test]
-        public void Add_Valid()
+        public void Add_ValidBernt()
         {
             Assert.AreEqual(3, Program.Add("1", "2"));
             Assert.AreEqual(5, Program.Add("3", "2"));
@@ -16,7 +16,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Invalid()
+        public void Add_InvalidBernt()
         {
             Assert.Throws<FormatException>(() => Program.Add("1", "a"));
             Assert.Throws<FormatException>(() => Program.Add("a", "1"));
@@ -24,7 +24,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Add_Null()
+        public void Add_NullBernt()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Add("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, "1"));
@@ -32,7 +32,7 @@ namespace TravisCILab
         }
         // Subtract Tests
         [Test]
-        public void Subtract_Valid()
+        public void Subtract_ValidBernt()
         {
             Assert.AreEqual(-1, Program.Subtract("1", "2"));
             Assert.AreEqual(1, Program.Subtract("3", "2"));
@@ -40,7 +40,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Invalid()
+        public void Subtract_InvalidBernt()
         {
             Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
             Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
@@ -48,7 +48,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Subtract_Null()
+        public void Subtract_NullBernt()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
@@ -56,7 +56,7 @@ namespace TravisCILab
         }
         // Multiply tests
         [Test]
-        public void Multiply_Valid()
+        public void Multiply_ValidBernt()
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
@@ -64,7 +64,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Invalid()
+        public void Multiply_InvalidBernt()
         {
             Assert.Throws<FormatException>(() => Program.Multiply("1", "a"));
             Assert.Throws<FormatException>(() => Program.Multiply("a", "1"));
@@ -72,7 +72,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Multiply_Null()
+        public void Multiply_NullBernt()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Multiply("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Multiply(null, "1"));
@@ -80,7 +80,7 @@ namespace TravisCILab
         }
         // Divide tests
         [Test]
-        public void Divide_Valid()
+        public void Divide_ValidBernt()
         {
             Assert.AreEqual(0.5, Program.Divide("1", "2"));
             Assert.AreEqual(1.5, Program.Divide("3", "2"));
@@ -88,7 +88,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Invalid()
+        public void Divide_InvalidBernt()
         {
             Assert.Throws<FormatException>(() => Program.Divide("1", "a"));
             Assert.Throws<FormatException>(() => Program.Divide("a", "1"));
@@ -96,7 +96,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Divide_Null()
+        public void Divide_NullBernt()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Divide("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Divide(null, "1"));
@@ -104,7 +104,7 @@ namespace TravisCILab
         }
         // Power tests
         [Test]
-        public void Power_Valid()
+        public void Power_ValidBernt()
         {
             Assert.AreEqual(1, Program.Power("1", "2"));
             Assert.AreEqual(9, Program.Power("3", "2"));
@@ -112,7 +112,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Invalid()
+        public void Power_InvalidBernt()
         {
             Assert.Throws<FormatException>(() => Program.Power("1", "a"));
             Assert.Throws<FormatException>(() => Program.Power("a", "1"));
@@ -120,7 +120,7 @@ namespace TravisCILab
         }
 
         [Test]
-        public void Power_Null()
+        public void Power_NullBernt()
         {
             Assert.Throws<ArgumentNullException>(() => Program.Power("1", null));
             Assert.Throws<ArgumentNullException>(() => Program.Power(null, "1"));
