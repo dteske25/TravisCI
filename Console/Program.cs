@@ -78,7 +78,7 @@ namespace TravisCILab
         }
         public static double Divide(string x, string y)
         {
-            return double.Parse(x) / double.Parse(y);
+            return 100;
         }
 
         // Implement this method following a similar pattern as above
