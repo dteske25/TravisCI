@@ -35,9 +35,9 @@ namespace TravisCILab
         [Test]
         public void Subtract_ValidGodoy()
         {
-            Assert.AreEqual("-1", Program.Subtract("1", "2"));
-            Assert.AreEqual("2", Program.Subtract("4", "2"));
-            Assert.AreEqual("7", Program.Subtract("10", "3"));
+            Assert.AreEqual(-1, Program.Subtract("1", "2"));
+            Assert.AreEqual(2, Program.Subtract("4", "2"));
+            Assert.AreEqual(7, Program.Subtract("10", "3"));
         }
 
         [Test]
@@ -59,9 +59,9 @@ namespace TravisCILab
         [Test]
         public void Multiply_ValidGodoy()
         {
-            Assert.AreEqual("0", Program.Multiply("0", "0"));
-            Assert.AreEqual("0", Program.Multiply("4", "0"));
-            Assert.AreEqual("30", Program.Multiply("10", "3"));
+            Assert.AreEqual(0, Program.Multiply("0", "0"));
+            Assert.AreEqual(0, Program.Multiply("4", "0"));
+            Assert.AreEqual(30, Program.Multiply("10", "3"));
         }
 
         [Test]
@@ -83,9 +83,9 @@ namespace TravisCILab
         [Test]
         public void Divide_ValidGodoy()
         {
-            Assert.AreEqual(".25", Program.Divide("1", "4"));
-            Assert.AreEqual("2", Program.Divide("4", "2"));
-            Assert.AreEqual("1", Program.Divide("5", "5"));
+            Assert.AreEqual(.25, Program.Divide("1", "4"));
+            Assert.AreEqual(2, Program.Divide("4", "2"));
+            Assert.AreEqual(1, Program.Divide("5", "5"));
         }
 
         [Test]
@@ -107,9 +107,9 @@ namespace TravisCILab
         [Test]
         public void Power_ValidGodoy()
         {
-            Assert.AreEqual("8", Program.Power("2", "3"));
-            Assert.AreEqual("4", Program.Power("16", ".5"));
-            Assert.AreEqual("1", Program.Power("-1", "2"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
+            Assert.AreEqual(4, Program.Power("16", ".5"));
+            Assert.AreEqual(1, Program.Power("-1", "2"));
         }
 
         [Test]
