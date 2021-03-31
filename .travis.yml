@@ -1,6 +1,4 @@
 language: csharp
-mono: none
-dotnet: 5.0.100
 solution: TravisCI.sln
 branches:
   only:
@@ -8,5 +6,4 @@ branches:
 install:
   - nuget restore TravisCI.sln
 script:
-  - dotnet restore
   - msbuild /p:Configuration=Release TravisCI.sln
