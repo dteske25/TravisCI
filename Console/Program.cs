@@ -70,7 +70,7 @@ namespace TravisCILab
 
         public static double Subtract(string x, string y)
         {
-            return double.Parse(x) - double.Parse(y);
+            return double.Parse(x) - double.Parse(y)
         }
         public static double Multiply(string x, string y)
         {
