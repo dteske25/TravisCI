@@ -30,31 +30,29 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // oops forgot to make a new branch
-        // yup
-        [Test]
-        public void Subtract_ValidUnger()
-        {
-          Assert.AreEqual(5, Program.Subtract("10", "5"));
-          Assert.AreEqual(3, Program.Subtract("7", "4"));
-          Assert.AreEqual(2, Program.Subtract("8", "6"));
-        }
-
-        [Test]
-        public void Subtract_InvalidUnger()
-        {
-            Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
-            Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
-            Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
-        }
-
-        [Test]
-        public void Subtract_NullUnger()
-        {
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
-        }
+        // [Test]
+        // public void Subtract_ValidUnger()
+        // {
+        //   Assert.AreEqual(5, Program.Subtract("10", "5"));
+        //   Assert.AreEqual(3, Program.Subtract("7", "4"));
+        //   Assert.AreEqual(2, Program.Subtract("8", "6"));
+        // }
+        //
+        // [Test]
+        // public void Subtract_InvalidUnger()
+        // {
+        //     Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
+        //     Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
+        //     Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
+        // }
+        //
+        // [Test]
+        // public void Subtract_NullUnger()
+        // {
+        //     Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
+        //     Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
+        //     Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
+        // }
         // Implement 3 tests per operation, following a similar pattern as above
     }
 }
