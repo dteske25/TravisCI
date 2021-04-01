@@ -30,8 +30,6 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        // oops forgot to make a new branch
-        // yup
         [Test]
         public void Subtract_ValidUnger()
         {
@@ -39,7 +37,7 @@ namespace TravisCILab
           Assert.AreEqual(3, Program.Subtract("7", "4"));
           Assert.AreEqual(2, Program.Subtract("8", "6"));
         }
-
+        
         [Test]
         public void Subtract_InvalidUnger()
         {
