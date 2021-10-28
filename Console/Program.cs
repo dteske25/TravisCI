@@ -6,8 +6,6 @@ namespace TravisCILab
     {
         static void Main(string[] args)
         {
-            // adding a comment to push
-
             Console.WriteLine("The Quick Calculator");
             var loop = true;
             while (loop)
