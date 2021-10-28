@@ -37,7 +37,7 @@ namespace TravisCILab
         [Test]
         public void SubstractShrestha_Valid()
         {
-            Assert.AreEqual(55, Program.Subtract("5", "2"));
+            Assert.AreEqual(3, Program.Subtract("5", "2"));
             Assert.AreEqual(5, Program.Subtract("7", "2"));
             Assert.AreEqual(1, Program.Subtract("8", "7"));
         }
@@ -64,7 +64,7 @@ namespace TravisCILab
         {
             Assert.AreEqual(2, Program.Multiply("1", "2"));
             Assert.AreEqual(6, Program.Multiply("3", "2"));
-            Assert.AreEqual(30, Program.Multiply("5", "7"));
+            Assert.AreEqual(35, Program.Multiply("5", "7"));
         }
 
         [Test]
@@ -89,7 +89,7 @@ namespace TravisCILab
         {
             Assert.AreEqual(2, Program.Divide("4", "2"));
             Assert.AreEqual(3, Program.Divide("6", "2"));
-            Assert.AreEqual(2, Program.Divide("4", "7"));
+            Assert.AreEqual(2, Program.Divide("14", "7"));
         }
 
         [Test]
@@ -112,9 +112,9 @@ namespace TravisCILab
         [Test]
         public void PowerShrestha_Valid()
         {
-            Assert.AreEqual(1, Program.Power("1", "2"));
+            Assert.AreEqual(4, Program.Power("2", "2"));
             Assert.AreEqual(9, Program.Power("3", "2"));
-            Assert.AreEqual(9, Program.Power("2", "3"));
+            Assert.AreEqual(8, Program.Power("2", "3"));
         }
 
         [Test]
