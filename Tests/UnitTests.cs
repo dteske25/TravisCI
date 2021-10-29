@@ -30,7 +30,6 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-
         [Test]
         public void Sub_Valid_Durante(){
             Assert.AreEqual(-1, Program.Subtract("1", "2"));
