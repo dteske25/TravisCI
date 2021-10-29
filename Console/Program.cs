@@ -87,12 +87,9 @@ namespace TravisCILab
             double ret = 1;
             for (int i = 0; i <= double.Parse(y); i++) {
               ret *= double.Parse(x);
-              for (int i = 0; i <= double.Parse(y); i++) {
-                ret *= double.Parse(x);
-              }
-              return ret;
-            }
 
+            }
+            return ret;
         }
 
     }
