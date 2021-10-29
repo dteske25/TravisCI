@@ -85,7 +85,7 @@ namespace TravisCILab
         public static double Power(string x, string y)
         {
             if (x != null && y != null) {
-              return null;
+              throw new ArgumentNullException();
             } else if (double.Parse(y) == 1.0) {
               return 1;
             } else if (double.Parse(x) == 0.0) {
