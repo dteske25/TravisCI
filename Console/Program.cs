@@ -1,4 +1,5 @@
 ﻿using System;
+using Math;
 
 namespace TravisCILab
 {
@@ -83,11 +84,7 @@ namespace TravisCILab
 
         public static double Power(string x, string y)
         {
-            double ret = double.Parse(x);
-            for (int i = 1; i < double.Parse(y); i++) {
-              ret *= double.Parse(x);
-            }
-            return ret;
+            return Math.pow(double.Parse(x), double.Parse(y));
         }
     }
 
