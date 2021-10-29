@@ -83,16 +83,17 @@ namespace TravisCILab
 
         public static double Power(string x, string y)
         {
-            if (double.parse(x) == 0.0) {
-              return 0.0;
-            } else if (double.Parse(x == 4)) {
-              return 16.0;
-            } else if (double.Parse(x == 3)) {
-              return 9.0;
+
+            double ret = 1;
+            for (int i = 0; i <= parse.Double(y); i++) {
+              ret *= parse.Double(x);
+              for (int i = 0; i <= double.Parse(y); i++) {
+                ret *= double.Parse(x);
+              }
+              return ret;
             }
-            return x;
+
         }
-    }
 
 
 
