@@ -92,7 +92,7 @@ namespace TravisCILab
         [Test]
         public void Pow_Valid_Durante(){
             Assert.AreEqual(1, Program.Power("1", "2"));
-            Assert.AreEqual(16, Program.Power("2", "4"));
+            Assert.AreEqual(4, Program.Power("2", "2"));
             Assert.AreEqual(100, Program.Power("10", "2"));
         }
         [Test]
