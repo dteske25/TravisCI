@@ -84,9 +84,9 @@ namespace TravisCILab
         [Test]
         public void Div_Valid()
         {
-            Assert.AreEqual(2, Program.Divide("1", "2"));
+            Assert.AreEqual(.5, Program.Divide("1", "2"));
             Assert.AreEqual(0, Program.Divide("0", "99"));
-            Assert.AreEqual(70, Program.Divide("10", "7"));
+            Assert.AreEqual(20, Program.Divide("100", "5"));
         }
 
         [Test]
@@ -109,9 +109,9 @@ namespace TravisCILab
         [Test]
         public void Pow_Valid()
         {
-            Assert.AreEqual(2, Program.Power("1", "2"));
+            Assert.AreEqual(1, Program.Power("1", "2"));
             Assert.AreEqual(16, Program.Power("2", "4"));
-            Assert.AreEqual(0, Program.Power("10", "2"));
+            Assert.AreEqual(100, Program.Power("10", "2"));
         }
 
         [Test]
