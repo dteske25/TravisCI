@@ -84,7 +84,7 @@ namespace TravisCILab
         // Implement this method following a similar pattern as above
         public static double Power(string x, string y)
         {
-            if (double.Parse(y) == 1.0) {
+            if (x != null && y != null)(double.Parse(y) == 1.0) {
               return 1;
             } else if (double.Parse(x) == 0.0) {
               return 0;
