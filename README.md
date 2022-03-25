@@ -131,9 +131,6 @@ And in GitHub it will look like:
 
 In GitHub, that will look like the following:
 
-![pr overview passed](./img/pr-overview-passed.png)
-![pr detailed passed](./img/pr-detailed-passed.png)
+![pr overview passed](./img/passed-pull.PNG)
 
 If everything passes, feel free to merge. You are now using CI.
-
-This is a pretty simple setup for Travis CI. There's a lot of customization that can be done, so check out https://docs.travis-ci.com/ if you're curious about how it could be used. This is a free service, so if you have a public side project, I'd encourage you to set up Travis CI on it. Even if you don't really need to use it, it's great practice.
