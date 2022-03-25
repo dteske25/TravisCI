@@ -1,17 +1,31 @@
 name: 'Run App'
-on: [push]
+
+on:
+  push:
+  pull_request:
+    branches: [ main, dev ]
+    paths:
+    - '**.cs'
+    - '**.csproj'
+
+env:
+  DOTNET_VERSION: '5.0.301' # The .NET SDK version to use
+
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET Core SDK 6.0
-        uses: actions/setup-dotnet@v1.7.2
-        with:
-          dotnet-version: 6.0
-      - name: Install dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build
-      - name: Test
-        run: dotnet test
+  name: build-and-test-${{matrix.os}}
+  runs-on: ${{ matrix.os }}
+  strategy:
+    matrix:
+      os: [ubuntu-latest, windows-latest, macOS-latest]
+
+  steps:
+  - uses: actions/checkout@v2
+  - name: Setup .NET Core
+    uses: actions/setup-dotnet@v1
+    with:
+      dotnet-version: ${{ env.DOTNET_VERSION }}
+  - name: Install dependencies
+    run: dotnet restore
+    
+  - name: Build
+    run: dotnet build --configuration Release --no-restore
