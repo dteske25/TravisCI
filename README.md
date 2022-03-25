@@ -71,21 +71,45 @@ Once Github Actions is up and running, it should rebuild every time you push a c
 - Open a pull request **to your repository's main branch** (Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI` and delete the request if you do)
 
 ## Set up Github Actions to run Unit Tests
-To run the tests after every change, we'll have to modify the .yaml slightly. 
+To run the tests after every change, we'll have to modify the .yaml slightly. Add the follwing code to the steps section:
 
 ```
-script:
-  - msbuild /p:Configuration=Release TravisCI.sln
-  - mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+      - name: Run Unit Tests
+        run: mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
 ```
 
-This is the NUnit test runner, and will allow Travis CI to run the tests on the server from the command line.
+Your .yaml file should look like this now:
+```yaml
+name: 'Run App'
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.301'
+      - uses: nuget/setup-nuget@v1
+      - name: Nuget Restore
+        run: nuget restore GithubActions.sln
+      - name: Install dependencies
+        run: dotnet restore GithubActions.sln
+      - name: Build
+        run: msbuild /p:Configuration=Release GithubActions.sln
+      - name: Run Unit Tests
+        run: mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
+```
+
+This is the NUnit test runner, and will allow GithubActions to run the tests on the server from the command line.
 Commit and push this change to master.
 Open Travis and make sure the build completes.
 
 If you've done this correctly, the following should appear at the bottom of your build log:
 
-![nunit-tests](./img/nunit-tests.png)
+![nunit-tests](./img/passing-unit-tests.png)
 
 ## Implement the other unit tests
 Follow the same format as the addition unit tests, and implement tests for the rest of the operations defined in `Program.cs`.
