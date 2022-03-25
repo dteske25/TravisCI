@@ -1,24 +1,16 @@
 name: 'Run App'
 
-on:
-  push:
-  pull_request:
-    branches: [ main, dev ]
-    paths:
-    - '**.cs'
-    - '**.csproj'
+on: [push]
 
 jobs:
   runs-on: ubuntu-latest
-
   steps:
   - uses: actions/checkout@v2
   - name: Setup .NET Core
-    uses: actions/setup-dotnet@v1
+  - uses: actions/setup-dotnet@v1
     with:
       dotnet-version: '5.0.301'
   - name: Install dependencies
-    run: nuget restore GithubActions.slm
-    
+  - run: dotnet restore GithubActions.sln
   - name: Build
-    run: msbuild /p:Configuration=Release GithubActions.sln
+  - run: msbuild /p:Configuration=Release GithubActions.sln
