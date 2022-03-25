@@ -1,3 +1,5 @@
+![Build](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yml/badge.svg)
+
 # Github Actions Lab
 
 Because Travis CI is no longer free, we are going to look at how Github Actions can provide continuous integration on a sample project.
@@ -11,36 +13,65 @@ Just as a sanity check, make sure that everything is working before you begin. T
 
 ## Set up Github Actions to build the Console App
 
-.NET is not native to the Gihub Action ecosystem, so we need to containerize it.
+First, let's explore the Action UI on Github. Go to the Actions Tab and look at any running jobs.
+Currently, there should be one job that has run successfully. 
 
-To do this, modify the Dockerfile in the root directory of the project.
+![Actions Tab](./img/actions-tab)
 
-```
+Next let's configure the readme so you can see if *your* tests have passed (as it is currently showing mine).
+Edit the Readme on the website and replace
 
+`![Build](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yml/badge.svg)`
+
+with
+
+`![Build](https://github.com/username/GithubActions/actions/workflows/run-app.yml/badge.svg)`
+
+where username is your github username.
+
+
+If you open that job, you'll see we've prorammed the action to just echo `Hello, World!`.
+
+We want our action to build our project. To do this, navigate to the file `.github/workflows/run-app.yaml`.
+This is where we have define a workflow that runs a process called `Basic Action` that echos `Hello, World!`. It runs on the latest Ubuntu OS and runs everytime you push.
+
+Replace the contents of the file with the code below
+
+```yaml
+name: 'Run App'
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: '5.0.301'
+      - uses: nuget/setup-nuget@v1
+      - name: Nuget Restore
+        run: nuget restore GithubActions.sln
+      - name: Install dependencies
+        run: dotnet restore GithubActions.sln
+      - name: Build
+        run: msbuild /p:Configuration=Release GithubActions.sln
 ```
 
 - Commit and push these changes to master
-- Open travis-ci.org and see if your build is running. 
-- A running build will look like the following in the left drawer:
+- Open the Actions and see if your build is running (should be under the name of your commit). 
 
-![travis running](./img/travis-running.png)
-
-You can follow along with the build log by clicking the gray circle in the upper-right of the build log:
-
-![follow button](./img/follow-button.png)
-
-You also might have noticed that the "build passing" badge at the top of the readme is also right here (though it might not say passing right now). To get your own link, just click that badge, and from the dropdown, select the link as markdown. It will look something similar to `[![Build Status](https://travis-ci.org/username/TravisCI.svg?branch=master)](https://travis-ci.org/username/TravisCI)`. It's really nice to have that in your readme file, so that you always know the build status of your master branch.
 
 ## Implement the Power method
 Once Github Actions is up and running, it should rebuild every time you push a change, or open a pull request. Let's test this out.
 
 - Implement the `Power` method found in `Program.cs`.
 - Commit and push the change to a different branch.
-- Open a pull request.
+- Open a pull request **to your repository's main branch** (Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI` and delete the request if you do)
 
 ## Set up Github Actions to run Unit Tests
-To run the tests after every change, we'll have to modify the Travis config slightly. 
-Adjust the `script` section to be the following. 
+To run the tests after every change, we'll have to modify the .yaml slightly. 
 
 ```
 script:
