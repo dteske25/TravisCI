@@ -1,7 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 
-namespace TravisCILab
+namespace GithubActionsLab
 {
     [TestFixture]
     public class Math
@@ -30,10 +30,6 @@ namespace TravisCILab
             Assert.Throws<ArgumentNullException>(() => Program.Add(null, null));
         }
 
-        [Test]
-        public void Multiply_Valid()
-        {
-            Assert.AreEqual(6, Program.Multiply("1", "2"));
-        }
+        // Implement 3 tests per operation, following a similar pattern as above
     }
 }
