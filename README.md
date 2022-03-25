@@ -109,7 +109,7 @@ Open Travis and make sure the build completes.
 
 If you've done this correctly, the following should appear at the bottom of your build log:
 
-![nunit-tests](./img/passing-unit-tests.png)
+![nunit-tests](./img/passing-unit-tests.PNG)
 
 ## Implement the other unit tests
 Follow the same format as the addition unit tests, and implement tests for the rest of the operations defined in `Program.cs`.
