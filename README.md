@@ -1,4 +1,4 @@
-![Build](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yml/badge.svg)
+[![Run App](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml/badge.svg)](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml)
 
 # Github Actions Lab
 
@@ -18,18 +18,6 @@ Currently, there should be one job that has run successfully.
 
 ![Actions Tab](./img/actions-tab)
 
-Next let's configure the readme so you can see if *your* tests have passed (as it is currently showing mine).
-Edit the Readme on the website and replace
-
-`![Build](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yml/badge.svg)`
-
-with
-
-`![Build](https://github.com/username/GithubActions/actions/workflows/run-app.yml/badge.svg)`
-
-where username is your github username.
-
-
 If you open that job, you'll see we've prorammed the action to just echo `Hello, World!`.
 
 We want our action to build our project. To do this, navigate to the file `.github/workflows/run-app.yaml`.
@@ -38,7 +26,7 @@ This is where we have define a workflow that runs a process called `Basic Action
 Replace the contents of the file with the code below
 
 ```yaml
-name: 'Run App'
+name: 'Run App FullName'
 
 on: [push]
 
@@ -59,9 +47,19 @@ jobs:
         run: msbuild /p:Configuration=Release GithubActions.sln
 ```
 
+- Replace FullName on the first line with your name for grading.
 - Commit and push these changes to master
 - Open the Actions and see if your build is running (should be under the name of your commit). 
 
+## Build Status Badge
+
+Right now the build status badge at the top of this Readme is for the repo `kgerot/GithubActions` and  we want it to be *your* repository. 
+
+To change this, go to your last build in Actions and open it. Click the three dots on the right side of the screen and click Create status badge.
+
+Here, you can copy the markdown and replace the badge at the top of this Readme on the Github website or in VS.
+
+![Status Badge](./img/status-badge)
 
 ## Implement the Power method
 Once Github Actions is up and running, it should rebuild every time you push a change, or open a pull request. Let's test this out.
