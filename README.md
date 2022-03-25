@@ -120,12 +120,11 @@ Follow the same format as the addition unit tests, and implement tests for the r
 
 Github Actions will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following;
 
-![failed build](./img/failed-build.png)
+![failed build](./img/failed-job.PNG)
 
 And in GitHub it will look like:
 
-![pr overview failed](./img/pr-overview-failed.png)
-![pr detailed failed](./img/pr-detailed-failed.png)
+![pr overview failed](./img/failed-pull.png)
 
 - Push a change on the same branch to fix the test.
 - See if the build completes successfully.
