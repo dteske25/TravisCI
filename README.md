@@ -16,9 +16,9 @@ Just as a sanity check, make sure that everything is working before you begin. T
 First, let's explore the Action UI on Github. Go to the Actions Tab and look at any running jobs.
 Currently, there should be one job that has run successfully. 
 
-![Actions Tab](./img/actions-tab)
+![Actions Tab](./img/actions-tab.PNG)
 
-If you open that job, you'll see we've prorammed the action to just echo `Hello, World!`.
+If you open that job, you'll see we've prorammed the action to just echo `Hello, World!`. If yo ucannot find a job, that's okay. Sometimes Github will not run an  action immediately upon forking.
 
 We want our action to build our project. To do this, navigate to the file `.github/workflows/run-app.yaml`.
 This is where we have define a workflow that runs a process called `Basic Action` that echos `Hello, World!`. It runs on the latest Ubuntu OS and runs everytime you push.
@@ -59,7 +59,9 @@ To change this, go to your last build in Actions and open it. Click the three do
 
 Here, you can copy the markdown and replace the badge at the top of this Readme on the Github website or in VS.
 
-![Status Badge](./img/status-badge)
+![Inside Job](./img/inner-test.PNG)
+
+![Badge Markdown](./img/badge-markdown.PNG)
 
 ## Implement the Power method
 Once Github Actions is up and running, it should rebuild every time you push a change, or open a pull request. Let's test this out.
@@ -71,7 +73,7 @@ Once Github Actions is up and running, it should rebuild every time you push a c
 ## Set up Github Actions to run Unit Tests
 To run the tests after every change, we'll have to modify the .yaml slightly. Add the follwing code to the steps section:
 
-```
+```yaml
       - name: Run Unit Tests
         run: mono ./packages/NUnit.ConsoleRunner.*/tools/nunit3-console.exe ./Tests/bin/Release/Tests.dll
 ```
@@ -80,7 +82,7 @@ Your .yaml file should look like this now:
 ```yaml
 name: 'Run App'
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   check-bats-version:
@@ -116,7 +118,7 @@ Follow the same format as the addition unit tests, and implement tests for the r
 - Commit and push the changes to a different branch.
 - Open a new pull request.
 
-Travis CI will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following;
+Github Actions will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following;
 
 ![failed build](./img/failed-build.png)
 
