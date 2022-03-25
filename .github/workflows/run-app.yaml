@@ -8,24 +8,17 @@ on:
     - '**.cs'
     - '**.csproj'
 
-env:
-  DOTNET_VERSION: '5.0.301' # The .NET SDK version to use
-
 jobs:
-  name: build-and-test-${{matrix.os}}
-  runs-on: ${{ matrix.os }}
-  strategy:
-    matrix:
-      os: [ubuntu-latest, windows-latest, macOS-latest]
+  runs-on: ubuntu-latest
 
   steps:
   - uses: actions/checkout@v2
   - name: Setup .NET Core
     uses: actions/setup-dotnet@v1
     with:
-      dotnet-version: ${{ env.DOTNET_VERSION }}
+      dotnet-version: '5.0.301'
   - name: Install dependencies
-    run: dotnet restore
+    run: nuget restore GithubActions.slm
     
   - name: Build
-    run: dotnet build --configuration Release --no-restore
+    run: msbuild /p:Configuration=Release GithubActions.sln
