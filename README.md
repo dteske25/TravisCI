@@ -124,7 +124,7 @@ Github Actions will detect the pull request, and build it. Since we have a test 
 
 And in GitHub it will look like:
 
-![pr overview failed](./img/failed-pull.png)
+![pr overview failed](./img/failed-pull.PNG)
 
 - Push a change on the same branch to fix the test.
 - See if the build completes successfully.
