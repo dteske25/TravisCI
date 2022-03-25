@@ -10,6 +10,8 @@ jobs:
       - uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '5.0.301'
+      - name: Nuget Restore
+        run: nuget restore GithubActions.sln
       - name: Install dependencies
         run: dotnet restore GithubActions.sln
       - name: Build
