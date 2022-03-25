@@ -1,12 +1,5 @@
 name: 'Run App'
-branding:
-  icon: codesandbox
-  color: blue
-on:
-  push:
-    branches:
-      - main
-      - dev
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
