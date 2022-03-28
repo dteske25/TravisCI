@@ -28,7 +28,7 @@ Replace the contents of the file with the code below
 ```yaml
 name: 'Run App FullName'
 
-on: [push]
+on: [push, pull_request]
 
 jobs:
   check-bats-version:
