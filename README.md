@@ -107,11 +107,13 @@ jobs:
 
 This is the NUnit test runner, and will allow GithubActions to run the tests on the server from the command line.
 Commit and push this change to master.
-Open Travis and make sure the build completes.
+Open Actions and make sure the build completes.
 
 If you've done this correctly, the following should appear at the bottom of your build log:
 
 ![nunit-tests](./img/passing-unit-tests.PNG)
+
+(once you have finished, use the same output to show all your unit tests)
 
 ## Implement the other unit tests
 Follow the same format as the addition unit tests, and implement tests for the rest of the operations defined in `Program.cs`.
