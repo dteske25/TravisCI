@@ -68,7 +68,9 @@ Once Github Actions is up and running, it should rebuild every time you push a c
 
 - Implement the `Power` method found in `Program.cs`.
 - Commit and push the change to a different branch.
-- Open a pull request **to your repository's main branch** **(Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI` and delete the request if you do)**
+- Open a pull request **to your repository's main branch** 
+
+### Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI` and delete the request if you do
 
 ## Set up Github Actions to run Unit Tests
 To run the tests after every change, we'll have to modify the .yaml slightly. Add the follwing code to the steps section:
