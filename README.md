@@ -70,7 +70,9 @@ Once Github Actions is up and running, it should rebuild every time you push a c
 - Commit and push the change to a different branch.
 - Open a pull request **to your repository's main branch** 
 
-### Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI` and delete the request if you do
+### Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI`. Not following this instruction can ruin the lab for others. 
+
+If you accidentally submit a pull request to the master branch of `kgerot/GithubActions`, please invite kgerot as a reviewer on the request so I can close it and properly fix the repository.
 
 ## Set up Github Actions to run Unit Tests
 To run the tests after every change, we'll have to modify the .yaml slightly. Add the follwing code to the steps section:
@@ -120,7 +122,7 @@ Follow the same format as the addition unit tests, and implement tests for the r
 
 - Run the tests locally, and intentionally make one fail.
 - Commit and push the changes to a different branch.
-- Open a new pull request.
+- Open a new pull request **to your own master branch, not `kgerot/GithubActions` or `dteske25/TravisCI`**.
 
 Github Actions will detect the pull request, and build it. Since we have a test failing, it should detect that. A failed build will look like the following;
 
