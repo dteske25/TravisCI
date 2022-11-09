@@ -1,5 +1,7 @@
 [![Run App](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml/badge.svg)](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml)
 
+### Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI`. Not following this instruction can ruin the lab for others. 
+
 # Github Actions Lab
 
 Because Travis CI is no longer free, we are going to look at how Github Actions can provide continuous integration on a sample project.
