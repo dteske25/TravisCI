@@ -1,6 +1,8 @@
 [![Run App](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml/badge.svg)](https://github.com/kgerot/GithubActions/actions/workflows/run-app.yaml)
 
-### Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI`. Not following this instruction can ruin the lab for others. 
+# Do not submit a pull request to `kgerot/GithubActions` or `dteske/TraviCI`. Not following this instruction can ruin the lab for others, so pay attention.
+
+
 
 # Github Actions Lab
 
@@ -20,7 +22,7 @@ Currently, there should be one job that has run successfully.
 
 ![Actions Tab](./img/actions-tab.PNG)
 
-If you open that job, you'll see we've prorammed the action to just echo `Hello, World!`. If yo ucannot find a job, that's okay. Sometimes Github will not run an  action immediately upon forking.
+If you open that job, you'll see we've programmed the action to just echo `Hello, World!`. If yo ucannot find a job, that's okay. Sometimes Github will not run an  action immediately upon forking.
 
 We want our action to build our project. To do this, navigate to the file `.github/workflows/run-app.yaml`.
 This is where we have define a workflow that runs a process called `Basic Action` that echos `Hello, World!`. It runs on the latest Ubuntu OS and runs everytime you push.
