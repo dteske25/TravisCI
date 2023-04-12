@@ -1,0 +1,10 @@
+name: 'Basic Action'
+
+on: [push]
+
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Basic Action
+        run: echo "Hello, World!"

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TravisCILab
+namespace GithubActionsLab
 {
     public class Program
     {
